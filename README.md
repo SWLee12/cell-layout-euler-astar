@@ -133,11 +133,21 @@ Name :AND2_X1
 
 ## Known Limitations & Future Work
 
-| Issue | Status | Future Direction |
-|---|---|---|
-| Cells with drive strength X2 and above are skipped | Currently excluded | Replace exhaustive permutation search with heuristic ordering |
-| A* may fail to find path when grid is heavily congested | Returns None | Implement rip-up and reroute strategy |
-| LEF/DEF physical constraints not enforced | Not implemented | Integrate tech.lef design rules into routing cost function |
+### X2 and above cells are excluded
+**Why**: Parallel transistors in X2+ cells cause combinatorial explosion in permutation search.
+X2 has 2× transistors in parallel, so permutations grow as N! — e.g. BUF_X12 would require 12! = 479,001,600 iterations, exceeding available memory.
+
+**Fix**: Merge parallel transistors into a single representative before Euler trail search, then duplicate the result. This reduces the problem back to X1 complexity regardless of drive strength.
+
+### A* routing may fail in congested grids
+**Why**: When many nets are already routed, a pin may become completely surrounded by obstacles and unreachable.
+
+**Fix**: Implement rip-up and reroute — temporarily remove blocking nets, reroute the failed net, then reroute the removed nets with updated constraints.
+
+### LEF/DEF physical constraints not enforced
+**Why**: Pin coordinates are computed from placement order only, without referencing actual metal layer rules (width, spacing, via enclosure).
+
+**Fix**: Integrate tech.lef design rules into the routing cost function so the A* path respects real DRC constraints.
 
 ---
 
