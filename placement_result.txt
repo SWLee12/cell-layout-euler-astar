@@ -1,0 +1,820 @@
+Name : AND2_X1
+PMOS : Z VDD Z_neg VDD
+NMOS : Z VSS net_0 Z_neg
+Gate : Z_neg A2 A1
+
+Name : AND2_X1
+PMOS : VDD Z_neg VDD Z
+NMOS : Z_neg net_0 VSS Z
+Gate : A1 A2 Z_neg
+
+Name : AND3_X1
+PMOS : Z VDD Z_neg VDD Z_neg
+NMOS : Z VSS net_1 net_0 Z_neg
+Gate : Z_neg A3 A2 A1
+
+Name : AND3_X1
+PMOS : Z_neg VDD Z_neg VDD Z
+NMOS : Z_neg net_0 net_1 VSS Z
+Gate : A1 A2 A3 Z_neg
+
+Name : AND4_X1
+PMOS : Z VDD Z_neg VDD Z_neg VDD
+NMOS : Z VSS net_2 net_1 net_0 Z_neg
+Gate : Z_neg A4 A3 A2 A1
+
+Name : AND4_X1
+PMOS : VDD Z_neg VDD Z_neg VDD Z
+NMOS : Z_neg net_0 net_1 net_2 VSS Z
+Gate : A1 A2 A3 A4 Z_neg
+
+Name : AOI21_X1
+PMOS : VDD net_1 ZN net_1
+NMOS : VSS ZN net_0 VSS
+Gate : B A1 A2
+
+Name : AOI21_X1
+PMOS : VDD net_1 ZN net_1
+NMOS : ZN VSS net_0 ZN
+Gate : B A2 A1
+
+Name : AOI22_X1
+PMOS : VDD net_2 ZN net_2 VDD
+NMOS : net_1 ZN net_0 VSS net_1
+Gate : B1 A1 A2 B2
+
+Name : AOI22_X1
+PMOS : net_2 ZN net_2 VDD net_2
+NMOS : VSS net_0 ZN net_1 VSS
+Gate : A2 A1 B1 B2
+
+Name : AOI22_X1
+PMOS : net_2 ZN net_2 VDD net_2
+NMOS : ZN net_0 VSS net_1 ZN
+Gate : A1 A2 B2 B1
+
+Name : AOI22_X1
+PMOS : ZN net_2 VDD net_2 ZN
+NMOS : net_0 ZN net_1 VSS net_0
+Gate : A1 B1 B2 A2
+
+Name : BUF_X1
+PMOS : Z VDD Z_neg
+NMOS : Z VSS Z_neg
+Gate : Z_neg I
+
+Name : BUF_X1
+PMOS : Z_neg VDD Z
+NMOS : Z_neg VSS Z
+Gate : I Z_neg
+
+Name : CLKBUF_X1
+PMOS : Z VDD Z_neg
+NMOS : Z VSS Z_neg
+Gate : Z_neg I
+
+Name : CLKBUF_X1
+PMOS : Z_neg VDD Z
+NMOS : Z_neg VSS Z
+Gate : I Z_neg
+
+Name : DFFRNQ_X1
+PMOS : Q VDD net11 net8 net2 VDD net9 VDD net9 net1 net10 VDD cki ncki VDD net4 VDD
+NMOS : Q VSS net11 net8 net2 VSS net12 net15 net15 net1 net10 VSS cki ncki ncki VSS net0 net4
+Gate : net4 net4 cki ncki net1 RN net2 dummy ncki cki D ncki dummy CLK RN net8
+
+Name : DFFRNQ_X1
+PMOS : VDD net4 VDD net11 net8 net2 VDD net9 VDD net9 net1 net10 VDD cki ncki VDD Q
+NMOS : net4 net0 VSS net11 net8 net2 VSS net12 net15 net15 net1 net10 VSS cki ncki ncki VSS Q
+Gate : net8 RN net4 cki ncki net1 RN net2 dummy ncki cki D ncki dummy CLK net4
+
+Name : DFFRNQ_X1
+PMOS : Q VDD net11 net8 net2 VDD net9 VDD net9 net1 net10 VDD net4 VDD ncki cki VDD
+NMOS : Q VSS net11 net8 net2 VSS net12 net15 net15 net1 net10 VSS net0 net4 ncki VSS VSS cki
+Gate : net4 net4 cki ncki net1 RN net2 dummy ncki cki D RN net8 CLK dummy ncki
+
+Name : DFFRNQ_X1
+PMOS : cki VDD net11 net8 net2 VDD net9 VDD net9 net1 net10 VDD net4 VDD ncki VDD Q
+NMOS : cki VSS net11 net8 net2 VSS net12 net15 net15 net1 net10 VSS net0 net4 ncki VSS VSS Q
+Gate : ncki net4 cki ncki net1 RN net2 dummy ncki cki D RN net8 CLK dummy net4
+
+Name : DFFRNQ_X1
+PMOS : VDD net4 VDD net11 net8 net2 VDD net9 VDD net9 net1 net10 VDD Q ncki VDD cki
+NMOS : net4 net0 VSS net11 net8 net2 VSS net12 net15 net15 net1 net10 VSS Q ncki ncki VSS cki
+Gate : net8 RN net4 cki ncki net1 RN net2 dummy ncki cki D net4 dummy CLK ncki
+
+Name : DFFRNQ_X1
+PMOS : cki VDD net11 net8 net2 VDD net9 VDD net9 net1 net10 VDD Q ncki VDD net4 VDD
+NMOS : cki VSS net11 net8 net2 VSS net12 net15 net15 net1 net10 VSS Q ncki ncki VSS net0 net4
+Gate : ncki net4 cki ncki net1 RN net2 dummy ncki cki D net4 dummy CLK RN net8
+
+Name : DFFRNQ_X1
+PMOS : Q VDD net11 net8 net2 VDD net9 VDD net9 net1 net10 VDD net4 VDD cki VDD ncki
+NMOS : Q VSS net11 net8 net2 VSS net12 net15 net15 net1 net10 VSS net0 net4 cki VSS VSS ncki
+Gate : net4 net4 cki ncki net1 RN net2 dummy ncki cki D RN net8 ncki dummy CLK
+
+Name : DFFRNQ_X1
+PMOS : ncki VDD net11 net8 net2 VDD net9 VDD net9 net1 net10 VDD net4 VDD cki VDD Q
+NMOS : ncki VSS net11 net8 net2 VSS net12 net15 net15 net1 net10 VSS net0 net4 cki VSS VSS Q
+Gate : CLK net4 cki ncki net1 RN net2 dummy ncki cki D RN net8 ncki dummy net4
+
+Name : DFFRNQ_X1
+PMOS : VDD net4 VDD net11 net8 net2 VDD net9 VDD net9 net1 net10 VDD Q cki VDD ncki
+NMOS : net4 net0 VSS net11 net8 net2 VSS net12 net15 net15 net1 net10 VSS Q cki cki VSS ncki
+Gate : net8 RN net4 cki ncki net1 RN net2 dummy ncki cki D net4 dummy ncki CLK
+
+Name : DFFRNQ_X1
+PMOS : ncki VDD net11 net8 net2 VDD net9 VDD net9 net1 net10 VDD Q cki VDD net4 VDD
+NMOS : ncki VSS net11 net8 net2 VSS net12 net15 net15 net1 net10 VSS Q cki cki VSS net0 net4
+Gate : CLK net4 cki ncki net1 RN net2 dummy ncki cki D net4 dummy ncki RN net8
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : CO VSS net36 net7 net5 VSS S S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net7 A B CI A B dummy net9 A B CI net7 CI B A A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : CO VSS net36 net7 net5 VSS S S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net7 A B CI A B dummy net9 A CI B net7 CI B A A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : CO VSS net36 net7 net5 VSS S S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net7 A B CI A B dummy net9 B A CI net7 CI B A A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : CO VSS net36 net7 net5 VSS S S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net7 A B CI A B dummy net9 B CI A net7 CI B A A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : CO VSS net36 net7 net5 VSS S S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net7 A B CI A B dummy net9 CI A B net7 CI B A A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : CO VSS net36 net7 net5 VSS S S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net7 A B CI A B dummy net9 CI B A net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B A B CI net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B A CI B net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B B A CI net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B B CI A net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B CI A B net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B CI B A net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B A B CI net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B A CI B net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B B A CI net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B B CI A net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B CI A B net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO VDD net19 net7 net1 VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : S VSS CO VSS net36 net7 net5 VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : net9 net7 dummy A B CI B CI B A net7 CI B A A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI B A dummy net9 A B CI net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI B A dummy net9 A CI B net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI B A dummy net9 B A CI net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI B A dummy net9 B CI A net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI B A dummy net9 CI A B net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI B A dummy net9 CI B A net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI A B dummy net9 A B CI net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI A B dummy net9 A CI B net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI A B dummy net9 B A CI net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI A B dummy net9 B CI A net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI A B dummy net9 CI A B net7 CI B A
+
+Name : FA_X1
+PMOS : CO VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : CO VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net7 A B CI A B dummy net9 CI B A net7 CI B A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI B A dummy net9 A B CI net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI B A dummy net9 A CI B net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI B A dummy net9 B A CI net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI B A dummy net9 B CI A net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI B A dummy net9 CI A B net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI B A dummy net9 CI B A net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI A B dummy net9 A B CI net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI A B dummy net9 A CI B net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI A B dummy net9 B A CI net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI A B dummy net9 B CI A net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI A B dummy net9 CI A B net7 CI B A net7
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD CO
+NMOS : VSS net36 net7 net5 VSS net5 S VSS net42 VSS net42 net9 net47 net49 VSS CO
+Gate : A B CI A B dummy net9 CI B A net7 CI B A net7
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A B A net7 dummy net9 A B CI net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A B A net7 dummy net9 A CI B net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A B A net7 dummy net9 B A CI net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A B A net7 dummy net9 B CI A net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A B A net7 dummy net9 CI A B net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A B A net7 dummy net9 CI B A net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A A B net7 dummy net9 A B CI net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A A B net7 dummy net9 A CI B net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A A B net7 dummy net9 B A CI net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A A B net7 dummy net9 B CI A net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A A B net7 dummy net9 CI A B net7 CI B A
+
+Name : FA_X1
+PMOS : net1 net7 net19 VDD net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : net5 net7 net36 VSS net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : CI B A A B net7 dummy net9 CI B A net7 CI B A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI B net7 dummy net9 A B CI net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI B net7 dummy net9 A CI B net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI B net7 dummy net9 B A CI net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI B net7 dummy net9 B CI A net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI B net7 dummy net9 CI A B net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD CO S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI B net7 dummy net9 CI B A net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI A B dummy net9 A B CI net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI A B dummy net9 A CI B net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI A B dummy net9 B A CI net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI A B dummy net9 B CI A net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI A B dummy net9 CI A B net7 CI B A A
+
+Name : FA_X1
+PMOS : VDD net19 net7 net1 VDD net1 S VDD net3 VDD net3 net9 net29 net31 VDD net1
+NMOS : VSS net36 net7 net5 VSS CO S VSS net42 VSS net42 net9 net47 net49 VSS net5
+Gate : A B CI A B dummy net9 CI B A net7 CI B A A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A B A A B CI net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A B A A CI B net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A B A B A CI net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A B A B CI A net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A B A CI A B net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A B A CI B A net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A A B A B CI net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A A B A CI B net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A A B B A CI net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A A B B CI A net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A A B CI A B net7 CI B A
+
+Name : FA_X1
+PMOS : S VDD CO net1 net7 net19 VDD net1 VDD net3 VDD net3 net9 net29 net31 VDD
+NMOS : S VSS CO net5 net7 net36 VSS net5 VSS net42 VSS net42 net9 net47 net49 VSS
+Gate : net9 net7 dummy CI B A A B CI B A net7 CI B A
+
+Name : HA_X1
+PMOS : S VDD NS net_2 VDD VDD NCO VDD CO
+NMOS : S VSS net_1 NS net_1 NCO net_0 VSS CO
+Gate : NS NCO A B dummy B A NCO
+
+Name : HA_X1
+PMOS : CO VDD NS net_2 VDD VDD NCO VDD S
+NMOS : CO VSS net_1 NS net_1 NCO net_0 VSS S
+Gate : NCO NCO A B dummy B A NS
+
+Name : INV_X1
+PMOS : ZN VDD
+NMOS : VSS ZN
+Gate : I
+
+Name : INV_X1
+PMOS : ZN VDD
+NMOS : ZN VSS
+Gate : I
+
+Name : LHQ_X1
+PMOS : Q VDD net0 net5 net1 VDD net7 net4 VDD net6
+NMOS : Q VSS net2 net5 net3 VSS net7 net4 VSS net6
+Gate : net5 net6 net7 net4 D net4 dummy E net5
+
+Name : LHQ_X1
+PMOS : net6 VDD net0 net5 net1 VDD net7 net4 VDD Q
+NMOS : net6 VSS net2 net5 net3 VSS net7 net4 VSS Q
+Gate : net5 net6 net7 net4 D net4 dummy E net5
+
+Name : LHQ_X1
+PMOS : Q VDD net0 net5 net1 VDD net6 net4 VDD net7
+NMOS : Q VSS net2 net5 net3 VSS net6 net4 VSS net7
+Gate : net5 net6 net7 net4 D net5 dummy E net4
+
+Name : LHQ_X1
+PMOS : net7 VDD net0 net5 net1 VDD net6 net4 VDD Q
+NMOS : net7 VSS net2 net5 net3 VSS net6 net4 VSS Q
+Gate : net4 net6 net7 net4 D net5 dummy E net5
+
+Name : LHQ_X1
+PMOS : net6 VDD net0 net5 net1 VDD Q net4 VDD net7
+NMOS : net6 VSS net2 net5 net3 VSS Q net4 VSS net7
+Gate : net5 net6 net7 net4 D net5 dummy E net4
+
+Name : LHQ_X1
+PMOS : net7 VDD net0 net5 net1 VDD Q net4 VDD net6
+NMOS : net7 VSS net2 net5 net3 VSS Q net4 VSS net6
+Gate : net4 net6 net7 net4 D net5 dummy E net5
+
+Name : LHQ_X1
+PMOS : Q VDD net0 net5 net1 VDD net6 net7 VDD net4
+NMOS : Q VSS net2 net5 net3 VSS net6 net7 VSS net4
+Gate : net5 net6 net7 net4 D net5 dummy net4 E
+
+Name : LHQ_X1
+PMOS : net4 VDD net0 net5 net1 VDD net6 net7 VDD Q
+NMOS : net4 VSS net2 net5 net3 VSS net6 net7 VSS Q
+Gate : E net6 net7 net4 D net5 dummy net4 net5
+
+Name : LHQ_X1
+PMOS : net6 VDD net0 net5 net1 VDD Q net7 VDD net4
+NMOS : net6 VSS net2 net5 net3 VSS Q net7 VSS net4
+Gate : net5 net6 net7 net4 D net5 dummy net4 E
+
+Name : LHQ_X1
+PMOS : net4 VDD net0 net5 net1 VDD Q net7 VDD net6
+NMOS : net4 VSS net2 net5 net3 VSS Q net7 VSS net6
+Gate : E net6 net7 net4 D net5 dummy net4 net5
+
+Name : LHQ_X1
+PMOS : net7 VDD Q net6 VDD net0 net5 net1 VDD net4
+NMOS : net7 VSS Q net6 VSS net2 net5 net3 VSS net4
+Gate : net4 net5 dummy net5 net6 net7 net4 D E
+
+Name : LHQ_X1
+PMOS : net4 VDD Q net6 VDD net0 net5 net1 VDD net7
+NMOS : net4 VSS Q net6 VSS net2 net5 net3 VSS net7
+Gate : E net5 dummy net5 net6 net7 net4 D net4
+
+Name : MUX2_X1
+PMOS : Z VDD net_2 int04 net_0 VDD sel1_n
+NMOS : Z VSS net_3 int04 net_1 VSS sel1_n
+Gate : int04 I0 S sel1_n I1 S
+
+Name : MUX2_X1
+PMOS : sel1_n VDD net_2 int04 net_0 VDD Z
+NMOS : sel1_n VSS net_3 int04 net_1 VSS Z
+Gate : S I0 S sel1_n I1 int04
+
+Name : NAND2_X1
+PMOS : ZN VDD ZN
+NMOS : VSS net_0 ZN
+Gate : A2 A1
+
+Name : NAND2_X1
+PMOS : ZN VDD ZN
+NMOS : ZN net_0 VSS
+Gate : A1 A2
+
+Name : NAND2_X1
+PMOS : VDD ZN VDD
+NMOS : VSS net_0 ZN
+Gate : A2 A1
+
+Name : NAND2_X1
+PMOS : VDD ZN VDD
+NMOS : ZN net_0 VSS
+Gate : A1 A2
+
+Name : NAND3_X1
+PMOS : ZN VDD ZN VDD
+NMOS : ZN net_0 net_1 VSS
+Gate : A1 A2 A3
+
+Name : NAND3_X1
+PMOS : ZN VDD ZN VDD
+NMOS : VSS net_1 net_0 ZN
+Gate : A3 A2 A1
+
+Name : NAND4_X1
+PMOS : ZN VDD ZN VDD ZN
+NMOS : VSS net_2 net_1 net_0 ZN
+Gate : A4 A3 A2 A1
+
+Name : NAND4_X1
+PMOS : ZN VDD ZN VDD ZN
+NMOS : ZN net_0 net_1 net_2 VSS
+Gate : A1 A2 A3 A4
+
+Name : NAND4_X1
+PMOS : VDD ZN VDD ZN VDD
+NMOS : VSS net_2 net_1 net_0 ZN
+Gate : A4 A3 A2 A1
+
+Name : NAND4_X1
+PMOS : VDD ZN VDD ZN VDD
+NMOS : ZN net_0 net_1 net_2 VSS
+Gate : A1 A2 A3 A4
+
+Name : NOR2_X1
+PMOS : ZN net_0 VDD
+NMOS : VSS ZN VSS
+Gate : A1 A2
+
+Name : NOR2_X1
+PMOS : VDD net_0 ZN
+NMOS : VSS ZN VSS
+Gate : A2 A1
+
+Name : NOR2_X1
+PMOS : ZN net_0 VDD
+NMOS : ZN VSS ZN
+Gate : A1 A2
+
+Name : NOR2_X1
+PMOS : VDD net_0 ZN
+NMOS : ZN VSS ZN
+Gate : A2 A1
+
+Name : NOR3_X1
+PMOS : ZN net_0 net_1 VDD
+NMOS : ZN VSS ZN VSS
+Gate : A1 A2 A3
+
+Name : NOR3_X1
+PMOS : VDD net_1 net_0 ZN
+NMOS : ZN VSS ZN VSS
+Gate : A3 A2 A1
+
+Name : NOR3_X1
+PMOS : ZN net_0 net_1 VDD
+NMOS : VSS ZN VSS ZN
+Gate : A1 A2 A3
+
+Name : NOR3_X1
+PMOS : VDD net_1 net_0 ZN
+NMOS : VSS ZN VSS ZN
+Gate : A3 A2 A1
+
+Name : NOR4_X1
+PMOS : ZN net_0 net_1 net_2 VDD
+NMOS : VSS ZN VSS ZN VSS
+Gate : A1 A2 A3 A4
+
+Name : NOR4_X1
+PMOS : VDD net_2 net_1 net_0 ZN
+NMOS : VSS ZN VSS ZN VSS
+Gate : A4 A3 A2 A1
+
+Name : NOR4_X1
+PMOS : ZN net_0 net_1 net_2 VDD
+NMOS : ZN VSS ZN VSS ZN
+Gate : A1 A2 A3 A4
+
+Name : NOR4_X1
+PMOS : VDD net_2 net_1 net_0 ZN
+NMOS : ZN VSS ZN VSS ZN
+Gate : A4 A3 A2 A1
+
+Name : OAI21_X1
+PMOS : VDD ZN net_1 VDD
+NMOS : VSS net_0 ZN net_0
+Gate : B A1 A2
+
+Name : OAI21_X1
+PMOS : ZN VDD net_1 ZN
+NMOS : VSS net_0 ZN net_0
+Gate : B A2 A1
+
+Name : OAI22_X1
+PMOS : ZN net_1 VDD net_2 ZN
+NMOS : net_0 ZN net_0 VSS net_0
+Gate : A1 A2 B2 B1
+
+Name : OAI22_X1
+PMOS : VDD net_1 ZN net_2 VDD
+NMOS : net_0 ZN net_0 VSS net_0
+Gate : A2 A1 B1 B2
+
+Name : OAI22_X1
+PMOS : net_2 VDD net_1 ZN net_2
+NMOS : VSS net_0 ZN net_0 VSS
+Gate : B2 A2 A1 B1
+
+Name : OAI22_X1
+PMOS : net_1 ZN net_2 VDD net_1
+NMOS : ZN net_0 VSS net_0 ZN
+Gate : A1 B1 B2 A2
+
+Name : OR2_X1
+PMOS : Z VDD net_0 Z_neg
+NMOS : Z VSS Z_neg VSS
+Gate : Z_neg A2 A1
+
+Name : OR2_X1
+PMOS : Z_neg net_0 VDD Z
+NMOS : VSS Z_neg VSS Z
+Gate : A1 A2 Z_neg
+
+Name : OR3_X1
+PMOS : Z VDD net_1 net_0 Z_neg
+NMOS : Z VSS Z_neg VSS Z_neg
+Gate : Z_neg A3 A2 A1
+
+Name : OR3_X1
+PMOS : Z_neg net_0 net_1 VDD Z
+NMOS : Z_neg VSS Z_neg VSS Z
+Gate : A1 A2 A3 Z_neg
+
+Name : OR4_X1
+PMOS : Z VDD net_2 net_1 net_0 Z_neg
+NMOS : Z VSS Z_neg VSS Z_neg VSS
+Gate : Z_neg A4 A3 A2 A1
+
+Name : OR4_X1
+PMOS : Z_neg net_0 net_1 net_2 VDD Z
+NMOS : VSS Z_neg VSS Z_neg VSS Z
+Gate : A1 A2 A3 A4 Z_neg
+
+Name : TIEH
+PMOS : Z VDD
+NMOS : VSS A
+Gate : A
+
+Name : TIEH
+PMOS : Z VDD
+NMOS : A VSS
+Gate : A
+
+Name : TIEL
+PMOS : A VDD
+NMOS : VSS ZN
+Gate : A
+
+Name : TIEL
+PMOS : A VDD
+NMOS : ZN VSS
+Gate : A
+
+Name : XNOR2_X1
+PMOS : VDD net_2 x1 net_2 x2 net_0 VDD ZN
+NMOS : VSS x1 net_1 VSS VSS x2 VSS ZN
+Gate : x2 A1 A2 dummy A1 A2 x1
+
+Name : XNOR2_X1
+PMOS : ZN VDD net_2 x1 net_2 x2 net_0 VDD
+NMOS : ZN VSS x1 net_1 VSS VSS x2 VSS
+Gate : x1 x2 A1 A2 dummy A1 A2
+
+Name : XNOR2_X1
+PMOS : ZN VDD net_2 x1 net_2 VDD net_0 x2
+NMOS : ZN VSS x1 net_1 VSS VSS x2 VSS
+Gate : x1 x2 A1 A2 dummy A2 A1
+
+Name : XOR2_X1
+PMOS : net_1 Z net_1 VDD net_2 x1
+NMOS : VSS net_0 Z VSS x1 VSS
+Gate : A2 A1 x1 A2 A1
+
